@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+div.post-list {
+    padding: 2rem;
+    background-color: $background-color;
+    display: flex;
+    flex-wrap: wrap;
+
+   @include breakpoint-small {
+        padding-right: 0;
+    }
+}
+
+.post-component {
+    border-radius: 20px;
+}
+
+.total-rate {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    color: $secondary-color;
+}

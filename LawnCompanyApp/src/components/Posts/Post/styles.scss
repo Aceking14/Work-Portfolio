@@ -1,0 +1,88 @@
+@import '../../../styles/variables.scss';
+
+.post-component {
+    border: solid 1px $border-color;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    @include breakpoint-small {
+        width: calc(50% - 2rem);
+        margin-right: 2rem;
+    }
+
+    @include breakpoint-large {
+        width: calc(33% - 2rem);
+
+    }
+    h2 {
+        margin: 0 0 1rem 0;
+        font-family: $title-font;
+        font-size: 28px;
+        font-weight: normal;
+        color: $primary-color;
+    }
+
+    .description {
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            max-width: 120px;
+            margin-right: 15px;
+        }
+
+        span {
+            color: $secondary-color;
+            line-height: 1.4rem;
+        }
+    }
+
+    button {
+
+        border: none;
+        background-color: #B22222;
+        color: #fff;
+        font-size: 18px;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        box-shadow: 4px 4px 6px rba(0,0,0,0.25);
+        border-radius: 30px;
+        scale: 75%;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 20px;
+
+        div {
+            font-size: 0.8rem;
+            color: $gray-color;
+            margin: 1.5rem 1.5rem 0 0;
+        
+            strong {
+                display: block;
+                color: $secondary-color;
+                font-size: 1rem;
+            }
+
+            &.promote-yes strong {
+                color: $primary-color;
+            }
+
+            &.promote-no strong {
+                color: $danger-color;
+            }
+        }
+    }
+
+    
+}
